@@ -1,0 +1,224 @@
+/*
+	Hands for Girls, HTML5 Canvas Game
+	Beta Version 1.0.2
+	Copyright (c) 2013 Farias Maiquita (https://twitter.com/fariasmaiquita)
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 20px;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	background: #f7f4e5;
+	font-family: 'Shadows Into Light Two', Times New Roman;
+	line-height: 1.2;
+}
+
+#loading {
+	width: 150px;
+	margin: -30px 0 0 -75px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	z-index: 0;
+}
+
+#loading p {
+	margin-top: 10px;
+	font-family: Arial;
+	font-size: 12px;
+	text-align: center;
+}
+
+p { margin-bottom: 10px; }
+
+a {
+	color: rgb(248, 147, 31);
+	text-decoration: none;
+	cursor: pointer;
+	
+	-webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+a:hover { text-decoration: underline; }
+
+a.button {
+	padding: 10px;
+	margin-top: 15px;
+	display: inline-block;
+	background-color: #ccd0d9;
+	color: #fff;
+	text-decoration: none;
+	
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+a.button:hover { background-color: rgb(248, 147, 31); }
+
+hr {
+	border-top: 1px dotted #ccc;
+	margin: 30px 0;
+}
+
+#canvas-girl {
+	display: block;
+	position: absolute;
+	z-index: 2;
+}
+
+#avoid-container {
+	overflow: hidden;
+	position: relative;
+	z-index: 1; 
+}
+
+#popups-container, #fadeout-box {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+#popups-container { z-index: 3; }
+
+#fadeout-box {
+	background: #f7f4e5;
+	opacity: 0;
+	z-index: 0;
+}
+
+.circle {
+	position: absolute;
+	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%; 
+	border-radius: 50%;
+}
+
+.circle.head { background-color: #000; }
+.circle.avoid { background-color: rgb(248, 147, 31); }
+.circle.plus { background-color: rgb(102, 204, 204); }
+.circle.minus { background-color: rgb(238, 67, 68); }
+
+.circle.hitpoints { 
+	width: 30px;
+	height: 20px;
+	padding: 5px 0;
+	margin: -15px 0 0 -15px;
+	font: Bold 15px Arial;
+	color: #fff;
+	text-align: center;
+}
+
+.shadow {
+	-webkit-box-shadow: 10px 10px 0px 0px rgba(68, 68, 68, 0.1);
+	-moz-box-shadow: 10px 10px 0px 0px rgba(68, 68, 68, 0.1);
+	box-shadow: 10px 10px 0px 0px rgba(68, 68, 68, 0.1);
+}
+
+#invitation {
+	visibility: hidden;
+	top: -100%;
+	left: 50%;
+	position: absolute;
+	z-index: 5;
+	width: 230px;
+	height: 200px;
+	padding: 50px 30px 30px;
+	margin: -140px 0 0 -130px;
+	background-color: #fff;
+	text-align: center;
+}
+
+#invitation a { display: block; }
+
+#why-video {
+	visibility: hidden;
+	top: -100%;
+	left: 50%;
+	position: absolute;
+	z-index: 6;
+	width: 640px;
+	height: 482px;
+	margin: -261px 0 0 -330px;
+	padding: 20px;
+	background-color: #fff;
+	text-align: center;
+}
+
+#why-video p { margin: 15px 0 0 0; }
+
+#video-container {
+	width: 640px;
+	height: 360px;
+	background-color: #f8f8f8;
+}
+
+#main-panels {
+	visibility: hidden;
+	top: -100%;
+	left: 50%;
+	position: absolute;
+	z-index: 7;
+	width: 480px;
+	height: 480px;
+	margin: -240px 0 0 -240px;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after { clear: both; }
+
+.clearfix { *zoom: 1; }
+
+#panel-links a {
+	display: block;
+	width: 140px;
+	float: left;
+	padding: 15px 10px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	background-color: #ccd0d9;
+}
+
+#panel-links a:hover { background-color: rgb(248, 147, 31); }
+
+#panel-links a.active {
+	background-color: #fff;
+	color: rgb(248, 147, 31);
+}
+
+#the-panels {
+	position: relative;
+	width: 1440px;
+	height: 330px;
+}
+
+#the-panels > div {
+	width: 440px;
+	padding: 30px 20px;
+	float: left;
+}
+
+ol { padding-left: 40px; }
+
+ol li { padding: 5px 0; }
+
+#start-resume { text-align: center; }

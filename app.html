@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<!--
+			Hands for Girls, HTML5 Canvas Game
+			Beta Version 1.0.1
+			Copyright (c) 2013 Farias Maiquita (https://twitter.com/fariasmaiquita)
+		-->
+		
+		<title>Hands for Girls</title>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="Hands for Girls is a HTML5 canvas game created by Farias Maiquita to help spread awareness about the girleffect.org movement. Come join the fun!">
+		<meta name="author" content="Farias Maiquita">
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="image_src" href="img/hands-for-girls.jpg" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="style.css?ver=1.0.2">
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+		
+		<div id="loading">
+			<img src="img/loading.png" alt="loading">
+			<p>Loading, please wait...</p>
+		</div>
+		
+		<canvas id="canvas-girl">
+			<p>HTML5 Canvas is not supported by older browsers.</p>
+		</canvas>
+		
+		<div id="avoid-container"></div>
+		<div id="popups-container"></div>
+		<div id="fadeout-box"></div>
+		
+		<audio id="gameplay-soundtrack" preload="auto">
+			<source src="soundtrack/once-tomorrow-new.ogg" type="audio/ogg">
+			<source src="soundtrack/once-tomorrow-new.mp3" type="audio/mpeg">
+		</audio>
+				
+		<div id="invitation" class="shadow">
+			<p>Hey! Let's help girls living in poverty, shall we?</p>
+			<br>
+			<a id="accept-btn" class="button">Yeah, I'd like that!</a>
+			<a id="not-sure-btn" class="button">I don't know, should I?</a>
+		</div>
+		
+		<div id="why-video" class="shadow">
+			<div id="video-container"></div>
+			<p>Watch the video above and if that isn't convincing enough you can click <a href="http://www.girleffect.org/why-girls" target="_blank" title="Why Girls on girleffect.org">here</a> for more solid reasons why we should invest in girls!</p>
+			<a id="now-sure-btn" class="button">Okay... I'm convinced, let's do this!</a>
+		</div>
+		
+		<div id="main-panels" class="shadow">
+			<div id="panel-links">
+				<a id="instructions-link" class="active">Instructions</a>
+				<a id="highscores-link">Scores</a>
+				<a id="about-link">About</a>
+			</div>
+			<div class="clearfix"></div>
+			<div id="the-panels" style="left: 0px;">
+				<div id="instructions-panel">
+					<p id="welcome-tagline">Ready to become a world changer? Here's what you need to do:</p>
+					<ol>
+						<li>Avoid the evil orange circles... Trust me they're very evil</li>
+						<li>Hit these orange circles with your pink trail to earn bonus points</li>
+						<li>And make sure you have a lot of fun =)</li>
+						<li>Ooh and you can press 'Enter' to pause and view your current score...</li>
+					</ol>
+				</div>
+				<div id="highscores-panel">
+					<p id="score">Your Score: 0</p>
+					<hr>
+					<p>High scores will be available on future updates.</p>
+					<p id="challenge">But in the meantime I challenge you to score higher than 35000.</p>
+				</div>
+				<div id="about-panel">
+					<p>Hello there! My name is Farias Maiquita and I'm a self-taught Web Designer and Developer.</p>
+					<p>Hands for Girls is my first project using HTML5 canvas and JavaScript. My goal is to use this project to spread awareness about the <a href="http://www.girleffect.org/" target="_blank">girleffect.org</a> movement and evolve oneself as an Interactive Developer.<p>
+					<p>This is still a beta version for testing purposes, so expect to notice a few bugs and stuff. Follow me on <a href="https://twitter.com/fariasmaiquita" target="_blank">twitter</a> for future updates.</p>
+					<p>And much thanks for stopping by =)</p>
+				</div>
+			</div>
+			<p style="text-align: center;"><a id="start-resume" class="button">Start New Game</a></p>
+		</div>
+		
+		<script src="main.js?ver=1.0.2"></script>
+		
+	</body>
+	
+</html>
